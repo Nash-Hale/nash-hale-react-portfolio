@@ -164,18 +164,17 @@ export default class PortfolioForm extends Component {
         }
 
         this.setState({
-          id: id,
-          name: name || "",
-          description: description || "",
-          category: category || "eCommerce",
-          position: position || "",
-          url: url || "",
-          editMode: true,
-          apiUrl: `https://nashhale.devcamp.space/portfolio/portfolio_items/${id}`,
-          apiAction: "patch",
-          thumb_image: thumb_image_url || "",
-          banner_image: banner_image_url || "",
-          logo: logo_url || "",
+          name: "",
+          description: "",
+          category: "eCommerce",
+          position: "",
+          url: "",
+          thumb_image: "",
+          banner_image: "",
+          logo: "",
+          editMode: false,
+          apiUrl: "https://nashhale.devcamp.space/portfolio/portfolio_items",
+          apiAction: "post",
         });
 
         [this.thumbRef, this.bannerRef, this.logoRef].forEach((ref) => {
