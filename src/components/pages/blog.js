@@ -80,7 +80,6 @@ class Blog extends Component {
       document.documentElement.offsetHeight
     ) {
       this.getBlogItems();
-      console.log("This is working too");
     }
   }
 
@@ -111,12 +110,10 @@ class Blog extends Component {
 
   UNSAFE_componentWillMount() {
     this.getBlogItems();
-    console.log("This is working");
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.onScroll, false);
-    console.log("This is working also");
   }
 
   render() {

@@ -161,6 +161,21 @@ export default class BlogForm extends Component {
             placeholder="Blog Status"
             value={this.state.blog_status}
           />
+
+          {/* TODO
+            MAKE A DROPDOWN FOR THE BLOG-FORM  
+          */}
+          {/* <select
+            type="text"
+            onChange={this.handleChange}
+            name="blog_status"
+            placeholder="Blog Status"
+            value={this.state.blog_status}
+            className="select-element"
+          >
+            <option value="draft">draft</option>
+            <option value="published">published</option>
+          </select> */}
         </div>
 
         <div className="one-column">

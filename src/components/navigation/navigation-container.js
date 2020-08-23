@@ -57,6 +57,14 @@ const NavigationComponent = (props) => {
           </NavLink>
         </div>
 
+        {props.loggedInStatus === "NOT_LOGGED_IN" ? (
+          <div className="nav-link-wrapper">
+            <NavLink to="/auth" activeClassName="nav-link-login">
+              Login
+            </NavLink>
+          </div>
+        ) : null}
+
         {props.loggedInStatus === "LOGGED_IN"
           ? dynamicLink("/portfolio-manager", "Portfolio Manager")
           : null}
@@ -69,16 +77,6 @@ const NavigationComponent = (props) => {
             <FontAwesomeIcon icon="sign-out-alt" />
           </a>
         ) : null}
-        {/* TODO 
-          Add conditional for login component in nav-bar  
-        */}
-        {/* {props.loggedInStatus === "NOT_LOGGED_IN" ? (
-          <div className="nav-link-wrapper">
-            <NavLink to="/auth" activeClassName="nav-link-login">
-              Login
-            </NavLink>
-          </div>
-        ) : null} */}
       </div>
     </div>
   );
