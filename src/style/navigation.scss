@@ -22,13 +22,15 @@
 
   .nav-link-wrapper {
     height: 22px;
-    border-bottom: 1px solid transparent;
-    transition: 0.5s ease-in-out;
+    // I removed the transparent border from here
+    // border-bottom: 1px solid transparent;
     margin-right: 20px;
     text-transform: uppercase;
     font-size: 0.9rem;
 
     a {
+      // I added the transparent border here
+      border-bottom: 1px solid transparent;
       color: $grey;
       text-decoration: none;
       &:hover {
@@ -36,7 +38,9 @@
       }
     }
 
-    &:hover {
+    &:hover a {
+      // I added the a tag here
+      transition: 0.5s ease-in-out;
       border-bottom: 1px solid black;
     }
 
